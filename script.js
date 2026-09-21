@@ -1,0 +1,1 @@
+document.querySelectorAll('a.disabled').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
