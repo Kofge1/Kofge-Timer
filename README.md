@@ -1,14 +1,7 @@
-# Kofge Timer Website
+# Kofge-Timer website
 
-Public landing page for **Kofge Timer** — an automatic stream timer.
+Public informational page for Kofge-Timer. Sales and downloads are not open yet.
 
-## Current integrations
-- Twitch
-- DonationAlerts
-- YouTube — planned
+The planned Russian subscription is 1000 RUB for 30 days on one PC, without automatic renewal. International prices are planned but payments are not connected. The page intentionally contains no checkout links or application binaries.
 
-## Payments
-The purchase buttons are placeholders. External payment links for international customers and Russia will be added before release.
-
-## Website
-This repository contains only the public website. Do not store application source code, binaries, API credentials, payment secrets, or private configuration here.
+This repository contains only public website files. Do not add application source code, `data/`, API credentials, payment secrets, or private configuration here.

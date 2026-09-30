@@ -1,68 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Kofge Timer — automatic stream timer for Twitch and DonationAlerts.">
-  <title>Kofge Timer — Automatic Stream Timer</title>
-  <link rel="stylesheet" href="theme-lilac.css?v=1">
-  <style>:root{--accent:#b892ff!important;--purple:#d2bcff!important}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kofge-Timer — локальный марафон-таймер для OBS с автоматическим начислением времени за донаты, подписки и награды Twitch.">
+  <meta name="theme-color" content="#0b0a14">
+  <title>Kofge-Timer — таймер для стрим-марафонов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header class="nav">
-  <a class="brand" href="#top">KOFGE <span>TIMER</span></a>
-  <nav><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></nav>
-  <a class="button small" href="#pricing">Get Kofge Timer</a>
-</header>
-<main id="top">
-<section class="hero">
-  <div class="badge">Built for stream marathons</div>
-  <h1>Your stream.<br><em>Your rules.</em> Your time.</h1>
-  <p class="lead">Kofge Timer automatically turns Twitch activity and DonationAlerts events into stream time — without manual calculations.</p>
-  <div class="actions"><a class="button" href="#pricing">Buy Kofge Timer</a><a class="ghost" href="#how">See how it works ↓</a></div>
-  <div class="timer-card">
-    <div class="status"><i></i> LIVE TIMER</div>
-    <div class="digits">12:48:32</div>
-    <div class="event"><span>Donation received</span><b>+05:00</b></div>
-  </div>
-</section>
+  <header class="nav wrap">
+    <a class="brand" href="#top" aria-label="Kofge-Timer"><span class="mark" aria-hidden="true">+</span><span>Kofge<span class="brand-accent">-Timer</span></span></a>
+    <nav aria-label="Разделы сайта">
+      <a href="#features" data-en="Features">Возможности</a>
+      <a href="#how" data-en="How it works">Как работает</a>
+      <a href="#pricing" data-en="Pricing">Стоимость</a>
+      <a href="#delivery" data-en="Access and refunds">Доступ и возврат</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="language" id="language" type="button" aria-label="Switch language">EN</button>
+  </header>
 
-<section class="section integrations">
-  <p class="eyebrow">INTEGRATIONS</p>
-  <h2>Connect the services you already use.</h2>
-  <div class="chips"><span>◉ Twitch</span><span>♡ DonationAlerts</span><span class="muted">▶ YouTube <small>COMING SOON</small></span></div>
-</section>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow" data-en="FOR STREAM MARATHONS">ДЛЯ СТРИМ-МАРАФОНОВ</p>
+        <h1><span data-en="Your stream.">Твой стрим.</span><br><em data-en="Your rules.">Твои правила.</em><br><span data-en="The timer handles the rest.">Остальное — таймер.</span></h1>
+        <p class="lead" data-en="Kofge-Timer turns donations, Twitch subscriptions and channel-point rewards into stream time. Set your rules once and focus on the broadcast.">Kofge-Timer превращает донаты, подписки Twitch и награды за баллы канала во время эфира. Настрой правила один раз и сосредоточься на стриме.</p>
+        <div class="actions"><a class="button primary" href="#pricing" data-en="See the subscription">Условия подписки</a><a class="text-link" href="#how" data-en="How does it work?">Как это работает?</a></div>
+        <p class="hero-note" data-en="Windows 10/11 · Local timer and OBS overlay · No cloud storage for your timer settings">Windows 10/11 · локальный таймер и оверлей OBS · настройки таймера хранятся на твоём ПК</p>
+      </div>
+      <div class="preview" aria-label="Пример интерфейса таймера">
+        <div class="preview-top"><span class="live-dot"></span><span data-en="LIVE TIMER">ТАЙМЕР ЭФИРА</span><span class="preview-menu">•••</span></div>
+        <div class="digits">12:48:32</div>
+        <div class="preview-rule"><span data-en="Donation received">Получен донат</span><strong>+05:00</strong></div>
+        <div class="preview-rule"><span data-en="Twitch subscription">Подписка Twitch</span><strong>+10:00</strong></div>
+        <div class="preview-foot" data-en="Illustration, not a live timer">Иллюстрация, не работающий таймер</div>
+      </div>
+    </section>
 
-<section class="section" id="features">
-  <p class="eyebrow">FEATURES</p><h2>Run the marathon.<br>Let Kofge handle the clock.</h2>
-  <div class="grid">
-    <article><b>01</b><h3>Automatic events</h3><p>Process supported stream events automatically and apply your timer rules in real time.</p></article>
-    <article><b>02</b><h3>Custom rules</h3><p>Decide how much time each event adds or removes. Configure the marathon around your stream.</p></article>
-    <article><b>03</b><h3>Built for live use</h3><p>A focused desktop tool designed for long streams where reliability and clear feedback matter.</p></article>
-  </div>
-</section>
+    <section class="strip"><div class="wrap strip-inner"><span>Twitch</span><span>DonationAlerts</span><span>Streamlabs</span><span>StreamElements</span><span>OBS</span></div></section>
 
-<section class="section flow" id="how">
-  <p class="eyebrow">HOW IT WORKS</p><h2>From viewer action to timer.<br>Automatically.</h2>
-  <div class="steps"><span>VIEWER</span><i>→</i><span>EVENT</span><i>→</i><span>YOUR RULE</span><i>→</i><span class="active">TIMER</span></div>
-  <p>Connect a supported service, configure your rules, start the timer and focus on the stream.</p>
-</section>
+    <section class="section wrap" id="features">
+      <p class="eyebrow" data-en="WHY KOFGE-TIMER">ЗАЧЕМ KOFGE-TIMER</p>
+      <h2 data-en="Keep the stream moving, without counting minutes by hand.">Веди эфир, а не считай минуты вручную.</h2>
+      <div class="features">
+        <article><span class="feature-icon">↗</span><h3 data-en="Automatic additions">Автоматические начисления</h3><p data-en="Donations, Twitch subscriptions and selected channel-point rewards add time according to your rules.">Донаты, подписки Twitch и выбранные награды за баллы канала добавляют время по твоим правилам.</p></article>
+        <article><span class="feature-icon">≋</span><h3 data-en="Your own rules">Свои правила</h3><p data-en="Choose the base currency, manual or updated exchange rates, time limits and the look of the timer.">Выбирай основную валюту, ручной или обновлённый курс, лимиты времени и оформление таймера.</p></article>
+        <article><span class="feature-icon">◉</span><h3 data-en="Made for OBS">Удобно для OBS</h3><p data-en="The local OBS source keeps the same address after a Windows restart. Stream data remains on your PC.">Локальный источник OBS сохраняет адрес после перезапуска Windows. Данные стрима остаются на твоём ПК.</p></article>
+      </div>
+    </section>
 
-<section class="section pricing" id="pricing">
-  <div><p class="eyebrow">PRICING</p><h2>One tool.<br>One purchase.</h2><p>No free edition. Kofge Timer is being developed as a paid desktop tool for streamers.</p></div>
-  <div class="price-card"><span>KOFGE TIMER</span><h3>Lifetime license</h3><div class="price">Price <small>TO BE ANNOUNCED</small></div>
-    <a class="button disabled" href="#" aria-disabled="true">International — Coming soon</a>
-    <a class="ghost buy disabled" href="#" aria-disabled="true">Россия — скоро</a>
-    <small>Payment links will be added before release.</small>
-  </div>
-</section>
+    <section class="section how" id="how"><div class="wrap">
+      <p class="eyebrow" data-en="GET STARTED">БЫСТРЫЙ СТАРТ</p>
+      <h2 data-en="Four steps to your marathon">Четыре шага до марафона</h2>
+      <div class="steps">
+        <div><b>01</b><strong data-en="Download and open">Скачай и открой</strong><p data-en="Run Kofge-Timer on a Windows PC.">Запусти Kofge-Timer на ПК с Windows.</p></div>
+        <div><b>02</b><strong data-en="Activate access">Активируй доступ</strong><p data-en="When sales open, enter an email for your receipt and pay in the app. Access will appear after payment confirmation; no license key to type.">После открытия продаж укажи email для чека и оплати подписку в приложении. Доступ появится после подтверждения платежа, без ввода ключа.</p></div>
+        <div><b>03</b><strong data-en="Connect services">Подключи сервисы</strong><p data-en="Choose Twitch and the donation platform you actually use.">Выбери Twitch и донат-платформу, которой пользуешься.</p></div>
+        <div><b>04</b><strong data-en="Add the OBS source">Добавь источник OBS</strong><p data-en="Set your time rules, add the local overlay URL once, and go live.">Настрой начисления, один раз добавь локальную ссылку оверлея и выходи в эфир.</p></div>
+      </div>
+    </div></section>
 
-<section class="section" id="faq"><p class="eyebrow">FAQ</p><h2>Questions.</h2>
-  <div class="faq"><details><summary>What platforms are supported?</summary><p>Twitch and DonationAlerts are the first supported integrations. More services are planned.</p></details>
-  <details><summary>Is Kofge Timer free?</summary><p>No. Kofge Timer is planned as a paid application.</p></details>
-  <details><summary>Where will I be able to buy it?</summary><p>Separate purchase options are planned for international customers and customers in Russia.</p></details></div>
-</section>
-</main>
-<footer><a class="brand" href="#top">KOFGE <span>TIMER</span></a><p>Automatic stream timer.</p><p>© 2026 Kofge Timer</p></footer>
-<script src="script.js"></script>
-</body></html>
+    <section class="section wrap pricing" id="pricing">
+      <div class="pricing-copy"><p class="eyebrow" data-en="SIMPLE PRICING">ПРОСТАЯ ПОДПИСКА</p><h2 data-en="Everything for one stream marathon.">Всё для стрим-марафона.</h2><p data-en="Full app access, updates and support. No automatic recurring charge: renew only when you want to keep using it.">Полный доступ к приложению, обновлениям и поддержке. Автоматического списания нет: продлевай подписку, когда захочешь продолжить пользоваться таймером.</p></div>
+      <div class="price-card"><p class="price-label" data-en="30 days of access · 1 PC">30 дней доступа · 1 ПК</p><div class="price">1000 ₽ <span data-en="/ 30 days">/ 30 дней</span></div><p class="other-prices">10 € · $10 <span data-en="— planned international prices">— планируемые цены для других стран</span></p><ul><li data-en="Updates and support included">Обновления и поддержка включены</li><li data-en="48 hours to renew after expiry">48 часов на продление после окончания срока</li><li data-en="Planned: full refund within 5 days; final terms are being prepared">План: полный возврат в первые 5 дней; условия готовятся</li><li data-en="Email-based transfer to another PC will be enabled before sales">Перенос на другой ПК по почте будет включён до продаж</li></ul><button class="button disabled" type="button" disabled data-en="Sales are not open yet">Продажи пока не открыты</button><small data-en="The app and payment links will appear here after the production checks. No payment is taken on this page.">Ссылка на приложение и оплата появятся здесь после проверки боевой версии. На этой странице платёж не принимается.</small></div>
+    </section>
+
+    <section class="section delivery" id="delivery"><div class="wrap">
+      <p class="eyebrow" data-en="BEFORE YOU BUY">ПЕРЕД ПОКУПКОЙ</p>
+      <h2 data-en="Know what happens after payment">Что произойдёт после оплаты</h2>
+      <div class="delivery-grid">
+        <article><b>01</b><h3 data-en="Get the app">Получение приложения</h3><p data-en="The Windows download will be available before sales open. After payment is confirmed in the app, 30 days of access will be added automatically to that PC.">Ссылка на приложение для Windows появится до открытия продаж. После подтверждения оплаты в приложении 30 дней доступа добавятся на этот ПК автоматически.</p></article>
+        <article><b>02</b><h3 data-en="Renew when you choose">Продление без автосписания</h3><p data-en="No automatic recurring charge. You can pay for another 30 days in the app. There are 48 hours after expiry to renew; an already running stream can finish.">Автоматического списания нет. Следующие 30 дней можно оплатить в приложении. После окончания срока есть 48 часов на продление; уже начатый эфир можно завершить.</p></article>
+        <article><b>03</b><h3 data-en="Support and refunds">Поддержка и возврат</h3><p data-en="The planned policy is a full refund within the first 5 days; final terms will be published before sales. Requests will be reviewed manually.">Планируется полный возврат в первые 5 дней; окончательные условия появятся до начала продаж. Обращения будут обрабатываться вручную.</p><p class="support-contact"><span data-en="Contact support:">Связаться с поддержкой:</span> <a href="mailto:kofge.dev@gmail.com">kofge.dev@gmail.com</a></p></article>
+      </div>
+      <p class="delivery-note" data-en="Seller details, terms of use and privacy information will be added before sales open. This draft does not take payments.">Данные продавца, условия использования и сведения об обработке данных будут добавлены до открытия продаж. Этот черновик не принимает платежи.</p>
+    </div></section>
+
+    <section class="section faq wrap" id="faq"><p class="eyebrow">FAQ</p><h2 data-en="Good to know before starting">Что важно знать заранее</h2>
+      <details><summary data-en="Does Kofge-Timer need to stay open in a browser?">Нужно ли держать таймер открытым в браузере?</summary><p data-en="No. Kofge-Timer runs locally on your PC; the browser is the control panel. The OBS source uses a stable local address.">Нет. Kofge-Timer работает локально на ПК, а браузер служит панелью управления. Источник OBS использует постоянный локальный адрес.</p></details>
+      <details><summary data-en="Do I need an internet connection?">Нужен ли интернет?</summary><p data-en="The timer and OBS overlay run locally. Internet is needed for Twitch and donation events, payments, updates and subscription checks. A short connection failure does not immediately stop an already running stream.">Таймер и оверлей OBS работают локально. Интернет нужен для событий Twitch и донатов, оплаты, обновлений и проверки подписки. Краткий сбой связи не останавливает уже начатый эфир сразу.</p></details>
+      <details><summary data-en="What happens when access expires during a live stream?">Что будет, если подписка закончится во время эфира?</summary><p data-en="An already running stream can finish. After the 48-hour renewal period, starting a new stream requires renewal.">Уже начатый эфир можно завершить. После 48 часов на продление для нового запуска потребуется оплатить следующий период.</p></details>
+      <details><summary data-en="Can I move my purchase to another PC?">Можно ли перенести покупку на другой ПК?</summary><p data-en="Yes. A one-time email code moves access to the new PC and disables it on the old one. This feature will be enabled before sales start.">Да. Одноразовый код из письма перенесёт доступ на новый ПК и отключит старый. Функция будет включена до начала продаж.</p></details>
+      <details><summary data-en="Can I pay in euros or dollars now?">Уже можно оплатить в евро или долларах?</summary><p data-en="Not yet. €10 and $10 are planned prices; international payment methods still need to be connected and tested.">Пока нет. 10 € и $10 — запланированные цены; способы международной оплаты ещё нужно подключить и проверить.</p></details>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><span>Kofge-Timer · © 2026</span><a href="mailto:kofge.dev@gmail.com">kofge.dev@gmail.com</a><a href="#delivery" data-en="Access and refunds">Доступ и возврат</a></div></footer>
+</body>
+</html>
