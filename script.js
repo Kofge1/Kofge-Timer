@@ -5,7 +5,9 @@ const russianText = new Map(translatable.map(element => [element, element.textCo
 function setLanguage(language) {
   const english = language === "en";
   document.documentElement.lang = english ? "en" : "ru";
-  document.title = english ? "Kofge-Timer — stream marathon timer" : "Kofge-Timer — таймер для стрим-марафонов";
+  document.title = english
+    ? document.body.dataset.titleEn || "Kofge-Timer — stream marathon timer"
+    : document.body.dataset.titleRu || "Kofge-Timer — таймер для стрим-марафонов";
   for (const element of translatable) element.textContent = english ? element.dataset.en : russianText.get(element);
   languageButton.textContent = english ? "RU" : "EN";
   languageButton.setAttribute("aria-label", english ? "Переключить на русский" : "Switch to English");
