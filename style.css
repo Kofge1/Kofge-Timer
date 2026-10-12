@@ -63,6 +63,7 @@ h3{font-size:21px;line-height:1.25;letter-spacing:-.025em;margin-bottom:13px}
 .price-card li{padding-left:5px;margin:10px 0}
 .price-card li::marker{color:var(--accent)}
 .price-card small{display:block;color:#9e90ae;font-size:12px;margin-top:12px;line-height:1.5}
+.price-details{display:inline-block;margin-top:15px;color:var(--accent2);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .delivery{background:#120f1c;border-block:1px solid #2a2136}
 .delivery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
 .delivery-grid article{border:1px solid var(--line);border-radius:18px;background:#1a1525;padding:27px}
@@ -85,6 +86,37 @@ h3{font-size:21px;line-height:1.25;letter-spacing:-.025em;margin-bottom:13px}
 .seller-details dd{margin:0;font-weight:700;overflow-wrap:anywhere}
 .seller-details a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
 .seller-help{max-width:800px;margin:25px 0 30px;color:var(--muted)}
+.purchase-page{max-width:960px}
+.launch-notice{border:1px solid #8255a4;border-radius:16px;background:#241832;padding:22px 26px;margin-bottom:48px}
+.launch-notice strong{color:var(--accent2)}
+.launch-notice p{color:#d3c9dd;margin:7px 0 0}
+.purchase-section{margin:0 0 48px}
+.purchase-section h2{font-size:clamp(27px,3vw,36px);margin-bottom:22px}
+.purchase-section>p{color:var(--muted)}
+.purchase-steps{counter-reset:buy;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none}
+.purchase-steps li{counter-increment:buy;border:1px solid var(--line);border-radius:16px;background:var(--card);padding:23px}
+.purchase-steps li:before{content:counter(buy,decimal-leading-zero);display:block;color:var(--accent2);font-size:13px;font-weight:800;margin-bottom:15px}
+.purchase-steps strong{font-size:18px}
+.purchase-steps p{color:var(--muted);font-size:14px;margin:8px 0 0}
+.purchase-facts{margin:0;border-top:1px solid var(--line)}
+.purchase-facts div{display:grid;grid-template-columns:minmax(135px,1fr) minmax(0,2fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.purchase-facts dt{color:var(--muted)}
+.purchase-facts dd{margin:0;font-weight:700}
+.purchase-note{margin-top:20px;font-size:13px}
+.legal-copy{max-width:900px}
+.legal-copy h1{max-width:850px}
+.legal-copy section{border-top:1px solid var(--line);padding:30px 0 20px}
+.legal-copy section h2{font-size:clamp(25px,3vw,34px);margin-bottom:18px}
+.legal-copy section p,.legal-meta{color:#d3c9dd;line-height:1.75}
+.legal-copy section p{margin-bottom:16px}
+.legal-copy section a{color:var(--accent2);text-decoration:underline;text-underline-offset:3px}
+.legal-meta{font-size:14px;margin-bottom:36px}
+.draft-banner{border:1px solid #916748;border-radius:14px;background:#342319;color:#f6dfc8;padding:20px 23px;margin:0 0 36px;line-height:1.65}
+.draft-banner strong{color:#fff0d9}
+.legal-data-list{margin:0 0 24px;border-top:1px solid var(--line)}
+.legal-data-list div{display:grid;grid-template-columns:minmax(145px,1fr) minmax(0,2fr);gap:16px;border-bottom:1px solid var(--line);padding:15px 0}
+.legal-data-list dt{font-weight:700;color:var(--accent2)}
+.legal-data-list dd{margin:0;color:var(--muted)}
 .faq{padding-top:30px}
 .faq details{border-bottom:1px solid var(--line);padding:21px 0}
 .faq summary{cursor:pointer;font-weight:700;font-size:18px;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px}
@@ -96,5 +128,12 @@ h3{font-size:21px;line-height:1.25;letter-spacing:-.025em;margin-bottom:13px}
 .footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;padding-block:26px}
 .footer a:hover{color:var(--text)}
 :focus-visible{outline:2px solid var(--accent2);outline-offset:4px}
+.skip-link{position:absolute;left:16px;top:-100px;z-index:10;padding:12px;background:var(--card)}
+.skip-link:focus{top:8px}
+.secondary{border-color:#75628f;background:#21192d}
+.sponsor{display:flex;align-items:center;justify-content:space-between;gap:32px;border:1px dashed #59426d;border-radius:18px;padding:28px;margin-bottom:65px}
+.sponsor>div{max-width:740px}.sponsor h2{font-size:27px;margin-bottom:12px}.sponsor .eyebrow{margin-bottom:12px}.sponsor p{color:var(--muted);margin-bottom:0}.sponsor .button{flex-shrink:0}
+@media(max-width:900px){.sponsor{flex-direction:column;align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media(max-width:900px){.nav{flex-wrap:wrap;padding-block:17px}.nav nav{order:3;width:100%;margin-left:0;gap:20px;overflow:auto;white-space:nowrap}.language{margin-left:auto}.hero{grid-template-columns:1fr;gap:45px;padding-block:70px 85px}.preview{max-width:590px;transform:none}.features,.delivery-grid{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.pricing{grid-template-columns:1fr;gap:25px}.price-card{max-width:590px}}
-@media(max-width:620px){.wrap{width:min(100% - 32px,1180px)}.brand{font-size:19px}.nav{gap:15px}.nav nav{gap:16px;font-size:13px}.hero{padding-top:58px}.hero h1{font-size:clamp(38px,10vw,48px);overflow-wrap:anywhere}.lead{font-size:16px}.features,.delivery-grid,.steps{grid-template-columns:1fr}.features article{min-height:0}.section{padding-block:74px}.faq{padding-top:0}.price-card{padding:24px}.price{font-size:48px;white-space:normal}.seller-card{padding:24px}.seller-details div{grid-template-columns:1fr;gap:3px}.legal-page{padding-block:64px 86px}.footer-inner{display:block}.footer-inner span{display:block;margin:6px 0}}
+@media(max-width:620px){.wrap{width:min(100% - 32px,1180px)}.brand{font-size:19px}.nav{gap:15px}.nav nav{gap:16px;font-size:13px}.hero{padding-top:58px}.hero h1{font-size:clamp(38px,10vw,48px);overflow-wrap:anywhere}.lead{font-size:16px}.features,.delivery-grid,.steps,.purchase-steps{grid-template-columns:1fr}.features article{min-height:0}.section{padding-block:74px}.faq{padding-top:0}.price-card{padding:24px}.price{font-size:48px;white-space:normal}.seller-card{padding:24px}.seller-details div,.purchase-facts div,.legal-data-list div{grid-template-columns:1fr;gap:3px}.legal-page{padding-block:64px 86px}.footer-inner{display:block}.footer-inner span{display:block;margin:6px 0}}
