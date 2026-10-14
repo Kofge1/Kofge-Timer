@@ -5,6 +5,7 @@ const russianTitle = document.title;
 const englishTitles = {
   "purchase.html": "Kofge-Timer — now free",
   "requisites.html": "Kofge-Timer — contact",
+  "contact.html": "Kofge-Timer — contact",
   "terms.html": "Kofge-Timer — terms of use",
   "privacy.html": "Kofge-Timer — privacy"
 };
