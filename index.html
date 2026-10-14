@@ -13,24 +13,24 @@
   <meta property="og:url" content="https://kofge1.github.io/Kofge-Timer/">
   <meta property="og:image" content="https://raw.githubusercontent.com/Kofge1/Kofge-Timer/main/docs/assets/kofge-timer-live-en.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="style.css?v=0.1.34">
-  <script src="script.js?v=0.1.34" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261014-integrations">
+  <script src="script.js?v=20261014-integrations" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">К содержанию / Skip to content</a>
   <header class="nav wrap">
     <a class="brand" href="index.html"><span class="mark" aria-hidden="true">+</span><span>Kofge<span class="brand-accent">-Timer</span></span></a>
-    <nav aria-label="Разделы / Navigation"><a href="index.html#features" data-en="Features">Возможности</a><a href="index.html#how" data-en="Get started">Начать</a><a href="index.html#faq">FAQ</a></nav>
+    <nav aria-label="Разделы / Navigation"><a href="index.html#integrations" data-en="Integrations">Сервисы</a><a href="index.html#features" data-en="Features">Возможности</a><a href="index.html#how" data-en="Get started">Начать</a><a href="index.html#faq">FAQ</a></nav>
     <button class="language" id="language" type="button" aria-label="Switch to English">EN</button>
   </header>
   <main id="content">
     <section class="hero wrap" id="top">
       <div>
-        <p class="eyebrow" data-en="FREE · WINDOWS 10/11 · OBS">БЕСПЛАТНО · WINDOWS 10/11 · OBS</p>
+        <p class="eyebrow" data-en="TWITCH · YOUTUBE · OBS · WINDOWS">TWITCH · YOUTUBE · OBS · WINDOWS</p>
         <h1 data-en="Your stream. Your rules. More time.">Твой стрим. Твои правила. Больше времени.</h1>
         <p class="lead" data-en="Donations, Twitch events and supported YouTube paid events add time automatically. Manage your marathon in a local browser panel. No account or paid plan required.">Донаты, события Twitch и поддерживаемые платные события YouTube автоматически добавляют время. Управляй марафоном из локальной панели в браузере. Без аккаунта и платной подписки.</p>
-        <div class="actions"><a class="button primary" href="https://github.com/Kofge1/Kofge-Timer/releases/latest/download/Kofge-Timer-Offline.zip" data-en="Download for Windows">Скачать для Windows</a><a class="text-link" href="#how" data-en="How to start →">Как начать →</a></div>
-        <p class="hero-note" data-en="v0.1.34 · Windows 10/11 x64 · ZIP with bundled runtime · No ads in the app or OBS">v0.1.34 · Windows 10/11 x64 · ZIP со всем необходимым · Без рекламы в приложении и OBS</p>
+        <div class="actions"><a class="button primary" href="https://github.com/Kofge1/Kofge-Timer/releases/latest/download/Kofge-Timer-Offline.zip" data-en="Download for Windows">Скачать для Windows</a><a class="text-link" href="#integrations" data-en="Supported services →">Поддерживаемые сервисы →</a></div>
+        <p class="hero-note" data-en="v0.1.34 · Windows 10/11 x64 · ZIP with bundled runtime · Free, no account or license key">v0.1.34 · Windows 10/11 x64 · ZIP со всем необходимым · Бесплатно, без аккаунта и ключа</p>
         <a class="release-link" href="https://github.com/Kofge1/Kofge-Timer/releases/tag/v0.1.34" data-en="What’s new in v0.1.34 →">Что нового в v0.1.34 →</a>
       </div>
       <div class="preview" aria-label="Пример таймера / Timer example">
@@ -43,6 +43,32 @@
       </div>
     </section>
     <div class="strip"><div class="strip-inner wrap"><span>Twitch</span><span>YouTube</span><span>DonationAlerts</span><span>Streamlabs</span><span>StreamElements</span><span>OBS Studio</span></div></div>
+    <section class="section wrap integrations" id="integrations" aria-labelledby="integrations-title">
+      <p class="eyebrow" data-en="PLATFORMS & INTEGRATIONS · v0.1.34">ПЛАТФОРМЫ И ИНТЕГРАЦИИ · v0.1.34</p>
+      <h2 id="integrations-title" data-en="Twitch, YouTube and donations — in one timer">Twitch, YouTube и донаты — в одном таймере</h2>
+      <p class="integrations-intro" data-en="Choose Twitch or YouTube as your active streaming platform. Connect an external donation service separately if needed. Each supported event adds time according to your rules.">Выбирай Twitch или YouTube как активную платформу стрима. При необходимости отдельно подключай сервис донатов. Поддерживаемые события добавляют время по твоим правилам.</p>
+      <div class="integrations-grid">
+        <article class="integration-card">
+          <div class="integration-title"><h3>Twitch</h3><span data-en="Supported">Поддерживается</span></div>
+          <p data-en="Subscriptions, gifted subscriptions, supported resubscription messages and up to five selected Channel Points rewards.">Подписки, подарочные подписки, поддерживаемые продления и до пяти выбранных наград за баллы канала.</p>
+        </article>
+        <article class="integration-card">
+          <div class="integration-title"><h3>YouTube</h3><span data-en="New in v0.1.34">Новое в v0.1.34</span></div>
+          <p data-en="Super Chat, Super Stickers, new paid channel memberships and gifted membership bundles. Set separate rules for membership events.">Super Chat, Super Stickers, новые платные членства и пакеты подарочных членств. Для членств можно задать отдельные правила.</p>
+          <p class="integration-caution" data-en="Setup requires your own Google OAuth client. Events are polled at least every 30 seconds, not instantly. Real monetized-stream testing is still pending.">Для подключения нужен собственный Google OAuth-клиент. Проверка событий — не чаще раза в 30 секунд, не мгновенно. Проверка на реальном монетизированном эфире ещё не завершена.</p>
+          <a class="integration-link" href="https://github.com/Kofge1/Kofge-Timer#youtube-setup" data-en="YouTube setup guide →">Инструкция по настройке YouTube →</a>
+        </article>
+        <article class="integration-card">
+          <div class="integration-title"><h3 data-en="Donations">Донаты</h3><span data-en="Supported">Поддерживается</span></div>
+          <p data-en="DonationAlerts, Streamlabs and StreamElements. Choose the donation source you use; time rules and currency conversion are configurable.">DonationAlerts, Streamlabs и StreamElements. Выбирай нужный источник донатов и настраивай начисление времени и конвертацию валют.</p>
+        </article>
+        <article class="integration-card">
+          <div class="integration-title"><h3>OBS Studio</h3><span data-en="Local overlay">Локальный оверлей</span></div>
+          <p data-en="Use the timer as an OBS Browser Source, or add its compact control dock. Live Mode provides a focused view for long streams.">Добавь таймер как «Источник браузера» в OBS или используй компактную панель управления. Live Mode удобен для длинных трансляций.</p>
+        </article>
+      </div>
+      <p class="integration-note" data-en="Important: Twitch and YouTube cannot both be the active streaming platform at the same time. External donation integrations are configured separately. Missed YouTube events while disconnected are not recovered automatically.">Важно: Twitch и YouTube нельзя использовать одновременно как две активные платформы. Внешние донаты настраиваются отдельно. Пропущенные во время отключения события YouTube автоматически не восстанавливаются.</p>
+    </section>
     <section class="section wrap" id="features">
       <p class="eyebrow" data-en="FOCUS ON YOUR STREAM">СОСРЕДОТОЧЬСЯ НА СТРИМЕ</p>
       <h2 data-en="Everything you need for a marathon">Всё нужное для марафона</h2>
@@ -50,6 +76,9 @@
         <article><span class="feature-icon" aria-hidden="true">+</span><h3 data-en="Flexible time rules">Гибкие правила времени</h3><p data-en="Donations, Twitch subscriptions, Channel Points and supported YouTube paid events. Set limits, preview rules safely and undo adjustments.">Донаты, подписки Twitch, баллы канала и поддерживаемые платные события YouTube. Настраивай лимиты, безопасно проверяй правила и отменяй начисления.</p></article>
         <article><span class="feature-icon" aria-hidden="true">↗</span><h3 data-en="Your currency">Твоя валюта</h3><p data-en="Choose RUB, USD, EUR or CNY. Enter exchange rates manually or request daily reference rates from the Bank of Russia.">Выбирай RUB, USD, EUR или CNY. Вводи курсы вручную или загружай дневные справочные курсы Банка России.</p></article>
         <article><span class="feature-icon" aria-hidden="true">◷</span><h3 data-en="A calm control panel">Удобное управление</h3><p data-en="Live mode, an OBS dock, themes, keyboard shortcuts and local backups. Settings stay on your PC.">Режим эфира, панель OBS, темы, горячие клавиши и локальные резервные копии. Настройки остаются на твоём ПК.</p></article>
+        <article><span class="feature-icon" aria-hidden="true">↶</span><h3 data-en="Full timer control">Контроль времени</h3><p data-en="Start or pause the timer, add or subtract time, undo changes and check event history. Use manual control without integrations.">Запускай и останавливай отсчёт, добавляй и убавляй время, отменяй изменения и проверяй историю событий. Можно работать вручную без подключений.</p></article>
+        <article><span class="feature-icon" aria-hidden="true">▣</span><h3 data-en="Save your setup">Сохраняй настройки</h3><p data-en="Profiles, local backups, customizable overlays and themes help you prepare for the next marathon.">Профили, локальные резервные копии, настройки оверлея и темы помогают подготовиться к следующему марафону.</p></article>
+        <article><span class="feature-icon" aria-hidden="true">✓</span><h3 data-en="Checked updates">Проверяемые обновления</h3><p data-en="The app checks GitHub releases at startup and asks for confirmation. Update archives are checked against their signature, SHA-256 and size.">Программа проверяет обновления на GitHub при запуске и запрашивает подтверждение. Архивы проверяются по подписи, SHA-256 и размеру.</p></article>
       </div>
     </section>
     <section class="section wrap showcase" id="interface">
@@ -72,7 +101,10 @@
       <p class="delivery-note" data-en="Updating from an older paid/test build? Close it completely, back up the data folder, then replace the app files with this ZIP. Keep your data folder. This first migration is manual.">Обновляешь старую платную/тестовую сборку? Полностью закрой её, сохрани копию папки data и замени файлы приложения файлами из ZIP. Папку data сохрани. Первый переход выполняется вручную.</p>
     </div></section>
     <section class="section wrap faq" id="faq"><h2 data-en="Before you start">Перед запуском</h2>
-      <details><summary data-en="What services are supported?">Какие сервисы поддерживаются?</summary><p data-en="Twitch supports subscriptions, gifted subscriptions and selected Channel Points rewards. YouTube supports Super Chat, Super Stickers and supported paid membership events. DonationAlerts, Streamlabs and StreamElements can be used as external donation sources. YouTube currently requires your own Google OAuth client and polls events at intervals of at least 30 seconds.">Twitch поддерживает подписки, подарочные подписки и выбранные награды за баллы канала. YouTube поддерживает Super Chat, Super Stickers и поддерживаемые платные события членства. Для внешних донатов можно использовать DonationAlerts, Streamlabs и StreamElements. Для YouTube сейчас нужен собственный Google OAuth-клиент, а события проверяются с интервалом не менее 30 секунд.</p></details>
+      <details><summary data-en="What services are supported?">Какие сервисы поддерживаются?</summary><p data-en="Twitch, YouTube, DonationAlerts, Streamlabs, StreamElements and OBS. See the integrations section for supported events and YouTube limitations.">Twitch, YouTube, DonationAlerts, Streamlabs, StreamElements и OBS. Подробности о событиях и ограничениях YouTube — в разделе «Сервисы».</p></details>
+      <details><summary data-en="How do I connect YouTube?">Как подключить YouTube?</summary><p data-en="You need a Google Cloud project with YouTube Data API v3 enabled, an OAuth web client, and the redirect URI shown in Kofge-Timer. Add its Client ID and Client Secret inside the local app, then authorize your YouTube channel. The detailed steps are in the GitHub README.">Нужен проект Google Cloud с YouTube Data API v3, веб-клиент OAuth и адрес перенаправления, указанный в Kofge-Timer. Введи Client ID и Client Secret в локальном приложении и подключи канал. Пошаговая инструкция находится в README на GitHub.</p><p><a class="integration-link" href="https://github.com/Kofge1/Kofge-Timer#youtube-setup" data-en="Read YouTube setup steps →">Открыть настройку YouTube →</a></p></details>
+      <details><summary data-en="Can Twitch and YouTube add time at the same time?">Twitch и YouTube могут начислять время одновременно?</summary><p data-en="No. Only one streaming platform is active at a time. Switching preserves the other platform's saved settings and the current timer time. External donation services are configured independently.">Нет. Активной может быть только одна стриминговая платформа. Переключение сохраняет настройки другой платформы и накопленное время таймера. Внешние сервисы донатов подключаются независимо.</p></details>
+      <details><summary data-en="Which archive should I download?">Какой архив скачивать?</summary><p data-en="Use Kofge-Timer-Offline.zip for Windows 10/11 x64: it already includes the required runtime. Extract the whole ZIP before launching Kofge-Timer.exe. The GitHub 'Source code' ZIP is not the ready-to-run application.">Для Windows 10/11 x64 выбирай Kofge-Timer-Offline.zip: в нём уже есть необходимая среда выполнения. Перед запуском Kofge-Timer.exe распакуй весь архив. Архив GitHub «Source code» не является готовой программой.</p></details>
       <details><summary data-en="Is it really free?">Это действительно бесплатно?</summary><p data-en="Yes. All timer features are available without a license key, registration, paid subscription or PC activation limit. Twitch subscriptions are viewer events, not a payment for this app.">Да. Все функции таймера доступны без ключа, регистрации, платной подписки и ограничения активаций по ПК. Подписки Twitch — события зрителей, а не оплата приложения.</p></details>
       <details><summary data-en="Does it need the internet?">Нужен ли интернет?</summary><p data-en="Manual timer control and the local OBS overlay work offline. Live events need an internet connection to the connected services. Updates are checked at startup; exchange rates are fetched only when you click the refresh button.">Ручное управление и локальный оверлей OBS работают без интернета. События подключённых сервисов требуют сети. Обновления проверяются при запуске, а курсы валют загружаются только по нажатию кнопки.</p></details>
       <details><summary data-en="How do updates work?">Как работают обновления?</summary><p data-en="The app checks public GitHub Releases. Before installation, it verifies a digital signature, archive size and SHA-256. Installation asks for confirmation, pauses the timer and creates a backup.">Приложение проверяет публичные GitHub Releases. Перед установкой проверяются цифровая подпись, размер и SHA-256 архива. Установка запрашивает подтверждение, ставит таймер на паузу и создаёт резервную копию.</p></details>
